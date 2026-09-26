@@ -37,7 +37,7 @@ bauen.
 
 ## Was wir bauen
 
-|  |  |
+| Leistung | Was dazugehört |
 | :-- | :-- |
 | **Websites & Komplettpakete** | Vom One-Pager bis zum umfangreichen Auftritt, inklusive Relaunch. Inhalte pflegen Sie selbst — oder wir übernehmen das. |
 | **Web-Apps & Software** | Kundenportale, Buchungssysteme, Dashboards und interne Werkzeuge. Software, die sich nach Ihren Abläufen richtet. |
@@ -88,7 +88,6 @@ bauen.
   <img alt="Sass" src="https://img.shields.io/badge/Sass-0B0B0B?style=flat-square&logo=sass&logoColor=F5F5F5">
   <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-0B0B0B?style=flat-square&logo=bootstrap&logoColor=F5F5F5">
   <img alt="Docker" src="https://img.shields.io/badge/Docker-0B0B0B?style=flat-square&logo=docker&logoColor=F5F5F5">
-  <img alt="Playwright" src="https://img.shields.io/badge/Playwright-0B0B0B?style=flat-square&logo=playwright&logoColor=F5F5F5">
   <img alt="pytest" src="https://img.shields.io/badge/pytest-0B0B0B?style=flat-square&logo=pytest&logoColor=F5F5F5">
 </p>
 
@@ -101,7 +100,7 @@ selben Tag — per E-Mail, Telefon oder Videocall, egal wo Ihr Unternehmen sitzt
 
 **[Projekt anfragen →](https://talvesa.de/kontakt/)**
 
-|  |  |
+| Anliegen | E-Mail |
 | :-- | :-- |
 | Neue Projekte | [projekte@talvesa.de](mailto:projekte@talvesa.de) |
 | Bestehende Kunden | [support@talvesa.de](mailto:support@talvesa.de) |
