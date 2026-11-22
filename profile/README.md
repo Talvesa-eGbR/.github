@@ -1,121 +1,131 @@
-<p align="center">
-  <a href="https://talvesa.de">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg">
-      <img alt="Talvesa — Websites und Apps mit Anspruch. Softwarestudio aus Freiburg im Breisgau." src="./assets/banner-light.svg" width="100%">
-    </picture>
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://talvesa.de"><b>talvesa.de</b></a>
-  &nbsp;·&nbsp;
-  <a href="https://talvesa.de/leistungen/">Leistungen</a>
-  &nbsp;·&nbsp;
-  <a href="https://talvesa.de/pakete/">Pakete</a>
-  &nbsp;·&nbsp;
-  <a href="https://talvesa.de/referenzen/">Referenzen</a>
-  &nbsp;·&nbsp;
-  <a href="https://talvesa.de/ratgeber/">Ratgeber</a>
-  &nbsp;·&nbsp;
-  <a href="https://talvesa.de/kontakt/">Kontakt</a>
-</p>
-
-<br>
-
-**Talvesa** ist ein Softwarestudio aus Freiburg im Breisgau. Wir gestalten und
-entwickeln Websites, Web-Apps und mobile Apps für kleine und mittelgroße
-Unternehmen in ganz Deutschland — von der ersten Idee bis zum laufenden Betrieb,
-mit einem festen Ansprechpartner und Hosting in Deutschland.
-
-Zwei Entwickler, zusammen mehr als 15 Jahre Erfahrung. Keine Hotline, kein
-Ticketsystem, kein Chatbot: Sie sprechen mit den Menschen, die Ihre Software
-bauen.
-
-<br>
-
-## Was wir bauen
-
-| Leistung | Was dazugehört |
-| :-- | :-- |
-| **Websites & Komplettpakete** | Vom One-Pager bis zum umfangreichen Auftritt, inklusive Relaunch. Inhalte pflegen Sie selbst — oder wir übernehmen das. |
-| **Web-Apps & Software** | Kundenportale, Buchungssysteme, Dashboards und interne Werkzeuge. Software, die sich nach Ihren Abläufen richtet. |
-| **Mobile Apps** | iOS und Android, vom ersten Prototyp bis zur Veröffentlichung im Store. |
-| **SEO & Sichtbarkeit** | Kurze Ladezeiten, saubere Technik und ein gepflegtes Google-Profil, damit man Sie findet. |
-
-<br>
-
-## Wie wir arbeiten
-
-```
-01  Gespräch     Sie erzählen, was Sie brauchen. Wir schicken ein festes Angebot.
-02  Entwurf      Struktur, Texte und Gestaltung — gezeigt, bevor wir bauen.
-03  Umsetzung    Sie sehen Zwischenstände und geben frei. Domain und SSL nebenbei.
-04  Livegang     Online, für Suchmaschinen eingerichtet, danach betreut.
-```
-
-<br>
-
-## Worauf wir bestehen
-
-- **Daten bleiben im Land.** Hosting in deutschen Rechenzentren, Datenschutz
-  sauber eingerichtet.
-- **Keine Ressourcen von Dritten.** Schriften, Skripte und Styles liegen auf
-  dem eigenen Server — kein CDN, kein Tracking, das niemand bestellt hat.
-- **Barrierefreiheit wird geprüft, nicht behauptet.** Unsere öffentlichen Seiten
-  laufen im CI durch axe-core gegen WCAG 2.2 AA, in hellem und
-  dunklem Design.
-- **Ladezeit ist eine Einstellung, keine Hoffnung.** Feste Budgets für Anfragen
-  und Seitengewicht statt eines Scores, der mit der Tagesform schwankt.
-- **Sicherheit wird an der Wirkung getestet.** CSP, Cookie-Flags und
-  Zugriffsrechte prüfen wir an der echten Antwort des Servers, nicht an der
-  Konfiguration.
-- **Klare Konditionen.** Feste Preise, faire Laufzeiten, und die Domain gehört
-  Ihnen.
-
-<br>
-
-## Werkzeuge
-
-<p>
-  <img alt="Python" src="https://img.shields.io/badge/Python-0B0B0B?style=flat-square&logo=python&logoColor=F5F5F5">
-  <img alt="Django" src="https://img.shields.io/badge/Django-0B0B0B?style=flat-square&logo=django&logoColor=F5F5F5">
-  <img alt="Django REST Framework" src="https://img.shields.io/badge/DRF-0B0B0B?style=flat-square&logo=django&logoColor=F5F5F5">
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-0B0B0B?style=flat-square&logo=postgresql&logoColor=F5F5F5">
-  <img alt="React" src="https://img.shields.io/badge/React-0B0B0B?style=flat-square&logo=react&logoColor=F5F5F5">
-  <img alt="Vite" src="https://img.shields.io/badge/Vite-0B0B0B?style=flat-square&logo=vite&logoColor=F5F5F5">
-  <img alt="Sass" src="https://img.shields.io/badge/Sass-0B0B0B?style=flat-square&logo=sass&logoColor=F5F5F5">
-  <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-0B0B0B?style=flat-square&logo=bootstrap&logoColor=F5F5F5">
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-0B0B0B?style=flat-square&logo=docker&logoColor=F5F5F5">
-  <img alt="pytest" src="https://img.shields.io/badge/pytest-0B0B0B?style=flat-square&logo=pytest&logoColor=F5F5F5">
-</p>
-
-<br>
-
-## Kontakt
-
-Erzählen Sie uns von Ihrem Projekt. Es antwortet ein Mensch, meistens noch am
-selben Tag — per E-Mail, Telefon oder Videocall, egal wo Ihr Unternehmen sitzt.
-
-**[Projekt anfragen →](https://talvesa.de/kontakt/)**
-
-| Anliegen | E-Mail |
-| :-- | :-- |
-| Neue Projekte | [projekte@talvesa.de](mailto:projekte@talvesa.de) |
-| Bestehende Kunden | [support@talvesa.de](mailto:support@talvesa.de) |
-| Allgemein | [info@talvesa.de](mailto:info@talvesa.de) |
-
-<br>
-
-<p align="center">
+<a href="https://talvesa.de">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/mark-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/mark-light.svg">
-    <img alt="Talvesa" src="./assets/mark-light.svg" width="40">
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/banner-dark-n.svg">
+    <source media="(max-width: 600px)" srcset="./assets/banner-light-n.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg">
+    <img alt="Talvesa — Websites und Apps mit Anspruch. Webdesign-Studio aus Freiburg im Breisgau." src="./assets/banner-light.svg" width="100%">
   </picture>
-  <br>
-  <sub>LÖSUNGEN FÜR DAS DIGITALE MORGEN</sub>
-  <br>
-  <sub><a href="https://talvesa.de/impressum/">Impressum</a> · <a href="https://talvesa.de/datenschutz/">Datenschutz</a></sub>
-</p>
+</a>
+
+**Talvesa** ist ein Webdesign-Studio aus Freiburg im Breisgau. Wir gestalten und
+entwickeln Websites und Apps für kleine und mittelgroße Unternehmen in ganz
+Deutschland. Von der ersten Idee bis zum laufenden Betrieb, mit einem festen
+Ansprechpartner und Hosting in Deutschland. Keine Hotline, kein Ticketsystem,
+kein Chatbot: Sie sprechen mit den Menschen, die Ihre Website bauen.
+
+<a href="https://talvesa.de/kontakt/">
+  <picture>
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/btn-anfragen-dark-n.svg">
+    <source media="(max-width: 600px)" srcset="./assets/btn-anfragen-light-n.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/btn-anfragen-dark.svg">
+    <img alt="Projekt anfragen" src="./assets/btn-anfragen-light.svg">
+  </picture>
+</a>
+<a href="https://talvesa.de/kontakt/?rueckruf=1#kontakt-telefon">
+  <picture>
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/btn-erstgespraech-dark-n.svg">
+    <source media="(max-width: 600px)" srcset="./assets/btn-erstgespraech-light-n.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/btn-erstgespraech-dark.svg">
+    <img alt="15-Minuten-Erstgespräch vereinbaren" src="./assets/btn-erstgespraech-light.svg">
+  </picture>
+</a>
+
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/stats-dark-n.svg">
+  <source media="(max-width: 600px)" srcset="./assets/stats-light-n.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/stats-dark.svg">
+  <img alt="15+ Jahre Erfahrung im Team, 1:1 persönliche Betreuung, DE Hosting in Deutschland, 0 Monate Mindestlaufzeit" src="./assets/stats-light.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/leistungen-dark-n.svg">
+  <source media="(max-width: 600px)" srcset="./assets/leistungen-light-n.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/leistungen-dark.svg">
+  <img alt="Leistungen: Websites und Komplettpakete, Hosting und Betreuung, Mobile Apps, SEO und Sichtbarkeit" src="./assets/leistungen-light.svg" width="100%">
+</picture>
+
+Schon eine Website? Mit dem **[kostenlosen Website-Check](https://talvesa.de/website-check/)**
+sehen wir uns Ihre Seite an. Mehr unter [talvesa.de/leistungen](https://talvesa.de/leistungen/).
+
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/head-referenzen-dark-n.svg">
+  <source media="(max-width: 600px)" srcset="./assets/head-referenzen-light-n.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/head-referenzen-dark.svg">
+  <img alt="Referenzen: Ausgewählte Projekte." src="./assets/head-referenzen-light.svg" width="100%">
+</picture>
+
+**01 — [Wiland Kummer](https://talvesa.de/referenzen/wiland/)**<br>
+Portfolio-Website für einen Filmemacher: große Filmausschnitte, trotzdem schnell geladen.
+
+**02 — [Stadionfinder](https://talvesa.de/referenzen/stadionfinder/)**<br>
+Eigene App für iPhone und Android: Freunde im Stadion finden, ohne Standort und ohne Werbung.
+
+**03 — [CloudWishlist](https://talvesa.de/referenzen/cloudwishlist/)**<br>
+Eigene Web-App für Wunschlisten, die dichthalten. Im Browser, ohne App.
+
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/pakete-dark-n.svg">
+  <source media="(max-width: 600px)" srcset="./assets/pakete-light-n.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/pakete-dark.svg">
+  <img alt="Pakete: S Präsenz 34,90 € netto pro Monat (brutto 41,53 €), M Business 59,90 € (brutto 71,28 €), L Plus 89,90 € (brutto 106,98 €). Hosting, Domain, SSL und Betreuung immer dabei. Websites auch zum Kauf." src="./assets/pakete-light.svg" width="100%">
+</picture>
+
+Alle Details und die Kauf-Option: [talvesa.de/pakete](https://talvesa.de/pakete/)
+
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/ablauf-dark-n.svg">
+  <source media="(max-width: 600px)" srcset="./assets/ablauf-light-n.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/ablauf-dark.svg">
+  <img alt="Ablauf in vier Schritten: Gespräch, Entwurf, Umsetzung, Livegang" src="./assets/ablauf-light.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/haltung-dark-n.svg">
+  <source media="(max-width: 600px)" srcset="./assets/haltung-light-n.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/haltung-dark.svg">
+  <img alt="Worauf wir bestehen: Daten bleiben im Land. Keine Ressourcen von Dritten. Barrierefreiheit geprüft. Ladezeit mit Budget. Sicherheit an der Wirkung getestet. Klare Konditionen." src="./assets/haltung-light.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/head-kontakt-dark-n.svg">
+  <source media="(max-width: 600px)" srcset="./assets/head-kontakt-light-n.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/head-kontakt-dark.svg">
+  <img alt="Kontakt: Erzählen Sie uns, was Sie vorhaben." src="./assets/head-kontakt-light.svg" width="100%">
+</picture>
+
+Es antwortet ein Mensch, meistens noch am selben Tag, per E-Mail, Telefon oder Videocall.
+
+**Neue Projekte** · [projekte@talvesa.de](mailto:projekte@talvesa.de)<br>
+**Bestehende Kunden** · [support@talvesa.de](mailto:support@talvesa.de)<br>
+**Allgemein** · [info@talvesa.de](mailto:info@talvesa.de)<br>
+**Telefon** · [+49 761 88781117](tel:+4976188781117)
+
+<a href="https://talvesa.de/kontakt/">
+  <picture>
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/btn-anfragen-dark-n.svg">
+    <source media="(max-width: 600px)" srcset="./assets/btn-anfragen-light-n.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/btn-anfragen-dark.svg">
+    <img alt="Projekt anfragen" src="./assets/btn-anfragen-light.svg">
+  </picture>
+</a>
+<a href="https://talvesa.de/kontakt/?rueckruf=1#kontakt-telefon">
+  <picture>
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/btn-erstgespraech-dark-n.svg">
+    <source media="(max-width: 600px)" srcset="./assets/btn-erstgespraech-light-n.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/btn-erstgespraech-dark.svg">
+    <img alt="15-Minuten-Erstgespräch vereinbaren" src="./assets/btn-erstgespraech-light.svg">
+  </picture>
+</a>
+
+<br>
+
+<sub>Werkzeuge: Python · Django · DRF · PostgreSQL · React · Vite · Sass · Bootstrap · Docker · pytest</sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/mark-dark.svg">
+  <img alt="Talvesa" src="./assets/mark-light.svg" width="40">
+</picture>
+<br>
+<sub>LÖSUNGEN FÜR DAS DIGITALE MORGEN</sub>
+<br>
+<sub><a href="https://talvesa.de/impressum/">Impressum</a> · <a href="https://talvesa.de/datenschutz/">Datenschutz</a></sub>
