@@ -1,12 +1,22 @@
-"""Zeichnet Banner und Bildmarke des Org-Profils (profile/assets/) als SVG.
+"""Zeichnet die Grafiken des Org-Profils (profile/assets/) als SVG.
 
-Vorbild ist brand/og-default.png aus Talvesa-eGbR/talvesa: Raster, Lockup,
-gesperrter Claim, große Mono-Zeile, rechts die angeschnittene Bildmarke.
+Alle Grafiken haben einen transparenten Hintergrund und liegen direkt auf der
+Seite, je eine Variante für helles und dunkles Design:
+
+- banner-*.svg   Lockup, gesperrter Claim, große Mono-Zeile, Bildmarke rechts
+- stats-*.svg    Kennzahlen von der Startseite, ohne Fläche und Trennlinien
+- btn-anfragen-*.svg, btn-erstgespraech-*.svg   Buttons (gefüllt / Outline)
+- mark-*.svg     Bildmarke für den Fuß der README
+
 Text wird mit fontTools in Pfade umgewandelt, damit GitHub keine Schrift laden
 muss. Die Pfade der Bildmarke stammen aus partials/logomark.html.
 
+Schriften: talvesa-mono-regular.woff2 und talvesa-mono-bold.woff2 von
+talvesa.de (/static/assets/talvesa-mono-regular-*.woff2, …-bold-*.woff2),
+ohne Hash umbenannt.
+
     pip install fonttools brotli
-    TALVESA_FONTS=../talvesa/talvesa/static/talvesa/fonts python scripts/render-profile-banner.py
+    TALVESA_FONTS=pfad/zu/fonts python scripts/render-profile-banner.py
 """
 
 import os
@@ -52,12 +62,19 @@ class Face:
 
 
 REG = Face(FONTS + "talvesa-mono-regular.woff2")
+BOLD = Face(FONTS + "talvesa-mono-bold.woff2")
 
-W, H = 1280, 420
 THEMES = {
-    "light": dict(bg="#F5F5F5", ink="#0B0B0B", soft="#444444", line="rgba(11,11,11,0.07)"),
-    "dark": dict(bg="#0B0B0B", ink="#F5F5F5", soft="#A3A3A3", line="rgba(245,245,245,0.07)"),
+    "light": dict(ink="#0B0B0B", soft="#444444", paper="#F5F5F5"),
+    "dark": dict(ink="#F5F5F5", soft="#A3A3A3", paper="#0B0B0B"),
 }
+
+
+def svg_open(w, h, label):
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
+        f'viewBox="0 0 {w} {h}" role="img" aria-label="{label}">'
+    )
 
 
 def emblem(x, y, height, fill):
@@ -65,40 +82,77 @@ def emblem(x, y, height, fill):
     return f'<path fill="{fill}" transform="translate({x:.2f} {y:.2f}) scale({s:.5f})" d="{EMBLEM}"/>'
 
 
+def path(face, s, x, y, size, fill, tracking=0.0):
+    d, end = face.text(s, x, y, size, tracking)
+    return f'<path fill="{fill}" d="{d}"/>', end
+
+
 def banner(t):
-    parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Talvesa — Websites und Apps mit Anspruch. Softwarestudio aus Freiburg im Breisgau.">',
-        f'<rect width="{W}" height="{H}" fill="{t["bg"]}"/>',
-    ]
-    # Raster wie auf dem Open-Graph-Bild: 60px, feine Linien.
-    grid = []
-    for gx in range(0, W + 1, 60):
-        grid.append(f"M{gx} 0V{H}")
-    for gy in range(0, H + 1, 60):
-        grid.append(f"M0 {gy}H{W}")
-    parts.append(f'<path d="{" ".join(grid)}" stroke="{t["line"]}" stroke-width="1" fill="none"/>')
+    # Kein Rechteck, kein Raster: der Hintergrund kommt von GitHub. Linksbündig
+    # ohne Einzug, damit das Banner auf einer Linie mit dem Text darunter steht.
+    W, H = 960, 320
+    parts = [svg_open(W, H, "Talvesa — Websites und Apps mit Anspruch. Webdesign-Studio aus Freiburg im Breisgau.")]
+    left = 0
+    parts.append(emblem(left, 14, 30, t["ink"]))
+    p, _ = path(REG, "Talvesa", left + 30 * EMBLEM_W / EMBLEM_H + 18, 42, 38, t["ink"], 0.02)
+    parts.append(p)
+    p, _ = path(REG, "LÖSUNGEN FÜR DAS DIGITALE MORGEN", left, 88, 19, t["soft"], 0.2)
+    parts.append(p)
+    p, _ = path(BOLD, "Websites und Apps", left, 182, 54, t["ink"])
+    parts.append(p)
+    p, _ = path(BOLD, "mit Anspruch.", left, 246, 54, t["ink"])
+    parts.append(p)
+    p, x = path(REG, "WEBDESIGN-STUDIO", left, 304, 19, t["ink"], 0.12)
+    parts.append(p)
+    p, _ = path(REG, "  ·  FREIBURG IM BREISGAU", x, 304, 19, t["soft"], 0.12)
+    parts.append(p)
+    # Große Bildmarke rechts.
+    parts.append(emblem(W - 190 * EMBLEM_W / EMBLEM_H, 14, 190, t["ink"]))
+    parts.append("</svg>")
+    return "\n".join(parts) + "\n"
 
-    left = 84
-    # Lockup: Bildmarke + Wortmarke.
-    parts.append(emblem(left, 62, 34, t["ink"]))
-    d, _ = REG.text("Talvesa", left + 34 * EMBLEM_W / EMBLEM_H + 22, 93, 44, 0.02)
-    parts.append(f'<path fill="{t["ink"]}" d="{d}"/>')
-    # Claim, gesperrt.
-    d, _ = REG.text("LÖSUNGEN FÜR DAS DIGITALE MORGEN", left, 140, 15, 0.28)
-    parts.append(f'<path fill="{t["soft"]}" d="{d}"/>')
-    # Die große Zeile.
-    d, _ = REG.text("Websites und Apps", left, 262, 52, 0)
-    parts.append(f'<path fill="{t["ink"]}" d="{d}"/>')
-    d, _ = REG.text("mit Anspruch.", left, 322, 52, 0)
-    parts.append(f'<path fill="{t["ink"]}" d="{d}"/>')
-    # Fußzeile.
-    d, x = REG.text("TALVESA.DE", left, 372, 15, 0.16)
-    parts.append(f'<path fill="{t["ink"]}" d="{d}"/>')
-    d, _ = REG.text("  ·  WEBSITES · WEB-APPS · MOBILE APPS · SEO", x, 372, 15, 0.16)
-    parts.append(f'<path fill="{t["soft"]}" d="{d}"/>')
 
-    # Große Bildmarke rechts, am Rand angeschnitten.
-    parts.append(emblem(800, 40, 340, t["ink"]))
+STATS = [
+    ("15+", "Jahre Erfahrung im Team"),
+    ("1:1", "Persönliche Betreuung"),
+    ("DE", "Hosting in Deutschland"),
+    ("0", "Monate Mindestlaufzeit"),
+]
+
+
+def stats(t):
+    # Zwei mal zwei statt vier nebeneinander: so bleiben die Beschriftungen
+    # auch in Handybreite lesbar. Keine Fläche, keine Trennlinien.
+    W, H = 960, 250
+    col, row = 480, 130
+    label = ", ".join(f"{n} {l}" for n, l in STATS)
+    parts = [svg_open(W, H, label)]
+    for i, (num, text) in enumerate(STATS):
+        x = (i % 2) * col
+        y = (i // 2) * row
+        p, _ = path(BOLD, num, x, y + 66, 68, t["ink"])
+        parts.append(p)
+        p, _ = path(REG, text, x, y + 110, 32, t["soft"])
+        parts.append(p)
+    parts.append("</svg>")
+    return "\n".join(parts) + "\n"
+
+
+def button(t, text, filled):
+    size, pad_x, h = 22, 30, 60
+    tw = BOLD.width(text, size)
+    w = round(tw + 2 * pad_x)
+    sw = 2
+    fill = t["ink"] if filled else "none"
+    fg = t["paper"] if filled else t["ink"]
+    parts = [svg_open(w, h, text)]
+    parts.append(
+        f'<rect x="{sw / 2}" y="{sw / 2}" width="{w - sw}" height="{h - sw}" rx="6" '
+        f'fill="{fill}" stroke="{t["ink"]}" stroke-width="{sw}"/>'
+    )
+    # Grundlinie optisch mittig: Versalhöhe ca. 0,7 em.
+    p, _ = path(BOLD, text, pad_x, h / 2 + size * 0.36, size, fg)
+    parts.append(p)
     parts.append("</svg>")
     return "\n".join(parts) + "\n"
 
@@ -112,9 +166,15 @@ def mark(t_ink):
     )
 
 
+def write(name, content):
+    with open(f"{OUT}/{name}", "w") as fh:
+        fh.write(content)
+
+
 for name, t in THEMES.items():
-    with open(f"{OUT}/banner-{name}.svg", "w") as fh:
-        fh.write(banner(t))
-    with open(f"{OUT}/mark-{name}.svg", "w") as fh:
-        fh.write(mark(t["ink"]))
+    write(f"banner-{name}.svg", banner(t))
+    write(f"stats-{name}.svg", stats(t))
+    write(f"btn-anfragen-{name}.svg", button(t, "Projekt anfragen →", True))
+    write(f"btn-erstgespraech-{name}.svg", button(t, "15-Minuten-Erstgespräch", False))
+    write(f"mark-{name}.svg", mark(t["ink"]))
 print("ok")
